@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title> Northwind</title>
+
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css'></link>
+
+    <link href="/static/stylesheets/main.css" rel="stylesheet"></link>
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+         <!--  <a class="navbar-brand" href="#">
+            <img alt="northwind" src="/static/assets/windicon.png">
+          </a> -->
+
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Products</a></li>
+          <li role="presentation"><a href="#">Sausages</a></li>
+        </ul>
+
+        </div>
+      </div>
+  </nav>
+
+      {% block content %}{% endblock %}
+
+
+
+<div class="footer">
+      <div id="foot">
+        <p class="muted credit">footer links and whatnot. can't seem to get a sticky footer...</p>
+      </div>
+    </div>
+
+  </body>
+
+</html>

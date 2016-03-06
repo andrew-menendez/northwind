@@ -1,33 +1,21 @@
-<html>
-  <head>
-    <title> Northwind</title>
+{% extends "layout.html" %}
 
-    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css'></link>
-
-    <link href="/static/stylesheets/main.css" rel="stylesheet"></link>
-
-  </head>
-  <body>
-  <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-         <!--  <a class="navbar-brand" href="#">
-            <img alt="northwind" src="/static/assets/windicon.png">
-          </a> -->
-
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Products</a></li>
-          <li role="presentation"><a href="#">Sausages</a></li>
-        </ul>
-
-        </div>
-      </div>
-  </nav>
+{% block content %}
   <div class="page-header">
      <h1>this is northwind <small>the sausage people</small></h1>
   </div>
+  <div>
+  <h3>What is it?</h3>
+    <p>Craft beer biodiesel aesthetic, deep v pug keffiyeh keytar disrupt celiac you probably haven't heard of them. Chicharrones selfies venmo, vegan cray XOXO kitsch stumptown four loko green juice twee authentic occupy. Wolf hella tofu blog. Brooklyn hella tofu hashtag cronut fixie. Selfies slow-carb narwhal, blog farm-to-table four loko echo park. Selvage distillery fingerstache, gochujang skateboard retro blog tacos. Retro banjo chicharrones sustainable, swag affogato austin.</p>
+    <div class="container">
+      <h4>Don't believe me?</h4>
+      <p>This is what famous people say about northwind:</p>
+      <blockquote>
+        <p>Fanny pack crucifix pour-over typewriter, plaid put a bird on it kitsch occupy helvetica +1. Stumptown umami man bun taxidermy skateboard. Pop-up cliche brunch kinfolk. Wayfarers hammock lomo, chia mixtape church-key dreamcatcher pop-up offal pour-over knausgaard fanny pack try-hard gochujang. VHS roof party cronut, seitan quinoa hella bicycle rights asymmetrical scenester schlitz truffaut hashtag food truck pork belly four loko. Selvage brunch umami, cliche artisan listicle keytar pitchfork mustache cardigan swag chambray. Tacos mustache small batch selfies.</p>
+        <footer>Abraham from the Walking Dead</footer>
+      </blockquote>
+    </div>
 
-  </body>
+  </div>
 
-</html>
+{% endblock %}

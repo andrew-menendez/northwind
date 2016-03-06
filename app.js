@@ -16,7 +16,8 @@ app.set('view engine', 'html');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 //bootstrap
 app.use('/vendor', express.static( path.join(__dirname, 'node_modules')));
-app.use(bodyParser.urlencoded({extended: false}));
+//app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser());
 //establish router
 app.use('/', require('./routes')); // brings in route/index...
 

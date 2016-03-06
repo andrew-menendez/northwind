@@ -1,9 +1,40 @@
 
 h1 {
-  color:blue;
+  color:#2368a0;
+  margin:1%;
+}
+
+h3 {
+  margin:1%;
 }
 
 nav img {
   width:30px;
   height: 30px;
+}
+
+body p {
+   margin:1%;
+
+}
+
+#basic {
+  min-height: 300px
+}
+
+form {
+  background-color: #F8F8F8;
+  border-bottom: 2px solid;
+  padding:1%;
+}
+button {
+  margin-left: 20px;
+}
+
+.footer {
+  background-color: #e3edf7;
+}
+
+#foot {
+  height: 40px;
 }
