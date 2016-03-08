@@ -29,13 +29,35 @@ router.post('/add', function(req,res,next){
     console.log(req.body);
         var newProduct={
             name: req.body.name,
-            description:req.body.desc
+            description:req.body.desc,
+            inStock:0
         };
       console.log(newProduct)
         models.product.create(newProduct).then(function (product) {
             console.log(chalk.green(product.name));
             res.redirect('/products');
         });
+});
+
+router.post('/update', function(req,res,next){
+
+    console.log(req.body);
+
+
+        var targetProduct={
+            'id':req.body.product,
+            'number': req.body.number
+
+        };
+
+        models.product.update (
+          {inStock:targetProduct.number},
+          {where:{id:targetProduct.id}
+        }).then(function(rows){
+              console.log('updated row '+ rows);
+              res.redirect('/products');
+            })
+
 });
 
 module.exports = router;

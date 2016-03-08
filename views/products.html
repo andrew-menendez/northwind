@@ -6,26 +6,45 @@
      <h1>Products <small>get some!</small></h1>
   </div>
 
+<div id="above">
   <form action='/add' method='POST'>
   <div class="form-group row">
     <label class="col-sm-2" for="name">Name</label>
-    <input  class="col-sm-4" type="text" class="form-control" name="name" value="John">
+    <input  class="col-sm-4" type="text" class="form-control" name="name" value="snowshoe">
 
     <button type="submit" class="btn btn-primary">Add Product</button>
   </div>
   <div class="form-group row">
     <label class="col-sm-2" for="desc">description</label>
-    <input class="col-sm-6" type="text" class="form-control" name="desc" value="info about John">
+    <input class="col-sm-6" type="text" class="form-control" name="desc" value="info about that stuff ">
   </div>
 
 
-</form>
+  </form>
+</div>
   <div id="basic">
       <div class="container">
       <h5> this is what we've got </h5>
-      <br><br>
+      <br>
           {% for product in products %}
-        <li><a href="localhost:8080/{{ product.name }}">{{ product.name }}</a></li>
+        <div id="below">
+          <form class="below" action='/update' method='POST'>
+            <div class="prod form-group row">
+              <div id='listForm'>
+                <h4>{{product.name}}</h4>
+                <label class="col-sm-2" for="number">Quantity: </label>
+                <input type="text" class="col-sm-1" name="number" value={{product.inStock}}>
+                <label class="col-sm-1" for="product"></label>
+                <input type="text" class="hidden col-sm-1" name="product" value={{product.id}}>
+
+                 <button type="submit" class="btn btn-primary">edit quantity</button>
+                 <h5> description</h5>
+                 <p>{{product.description}}</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
 
       {% endfor %}
       </div>

@@ -22,13 +22,24 @@ body p {
   min-height: 300px
 }
 
-form {
+#above form {
   background-color: #F8F8F8;
   border-bottom: 2px solid;
   padding:1%;
 }
+
+div#listForm {
+    padding-left: 25px;
+}
+
 button {
   margin-left: 20px;
+}
+
+#below form {
+  border: 1px solid;
+  background-color: #dbe6fc;
+  border-radius: 10px
 }
 
 .footer {
