@@ -28,7 +28,7 @@
       <br>
           {% for product in products %}
         <div id="below">
-          <form class="below" action='/update' method='POST'>
+          <form class="below" action='/{{product.id}}?_method=PUT' method='POST'>
             <div class="prod form-group row">
               <div id='listForm'>
                 <h4>{{product.name}}</h4>

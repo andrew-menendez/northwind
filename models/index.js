@@ -22,7 +22,7 @@ var sql = new Sequelize(database, 'root', null, {
 sql.authenticate().then(function() {
   console.log('connected to ', database);
 }).catch(function() {
-  console.log("fuck!");
+  console.log("fuck!");//woooahahhaha
 }).done();
 
 
@@ -31,6 +31,7 @@ var db = {};
 // from sequelize docs: http://docs.sequelizejs.com/en/1.7.0/articles/express/
 // strategy for storing models in individual files:
 // read current directory
+// this is fine if you understand every line--- if you don't.. then don't copy and paste :)
 fs
   .readdirSync(__dirname)
   .filter(function(file) {
